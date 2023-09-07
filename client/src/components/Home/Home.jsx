@@ -18,13 +18,13 @@ const Home = () => {
 
   const getCategories = async () => {
     const res = await fetchDataFromApi("/api/categories?populate=*");
-    console.log(res);
+    // console.log(res);
     setCategories(res);
   };
 
   const getProducts = async () => {
     const res = await fetchDataFromApi("/api/products?populate=*");
-    console.log(res);
+    // console.log(res);
     setProducts(res);
   };
   return (
