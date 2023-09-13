@@ -18,6 +18,8 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const navigate = useNavigate();
 
+  const { cartCount } = useContext(Context);
+
   const handleScroll = () => {
     const offset = window.scrollY;
 
@@ -47,7 +49,7 @@ const Header = () => {
             <AiOutlineHeart />
             <span className="cart-icon" onClick={() => setShowCart(!showCart)}>
               <CgShoppingCart />
-              <span>4</span>
+              {!!cartCount && <span>{cartCount}</span>}
             </span>
           </div>
         </div>
